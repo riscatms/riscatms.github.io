@@ -1,0 +1,118 @@
+    /* .background1 {
+        background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+        min-height: '100vh';
+        display: 'flex';
+        justify-content: 'center';
+        align-items: 'center'
+    } */
+
+    @font-face {
+        font-family: "lefthanded";
+        src: url("../font/lefthanded.otf") format("opentype");
+    }
+
+    @font-face {
+        font-family: "karakaze-R";
+        src: url("../font/karakaze-R.otf") format("opentype");
+    }
+
+    @font-face {
+        font-family: "yosugar";
+        src: url("../font/yosugaraver1_2.ttf") format("opentype");
+    }
+
+    
+
+    .loading-screen {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        /* background: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%); */
+        background: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);
+    }
+
+    .main-screen {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        /* background: linear-gradient(to top, #fed6e3 0%, #a8edea 100%); */
+        background: white;
+    }
+
+    .test {
+        background-image: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
+    }
+
+    .separator {
+        border: none;
+        border-top: 1px solid #747171;
+        margin: 20px auto;
+        width: 90%;
+    }
+
+    .separator-links {
+        border: none;
+        border-top: 1px solid #747171;
+        margin: 20px auto;
+        width: 80%;
+    }
+
+    .quote {
+        font-size: 0.9em;
+        text-align: center;
+        color: #333;
+        padding: 10px;
+        position: relative;
+        margin: 20px;
+        font-family: 'Polar', Helvetica, Arial, sans-serif;
+    }
+    .quote::before {
+        content: "";
+        position: absolute;
+        height: 70%;
+        width: 2px;  /* 调整条形的宽度 */
+        background-color: #0101013a; /* 黑色背景 */
+        left: 0;
+        top: 10px;
+    }
+
+    .common-small-header {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .common-small-header h3 {
+        font-family: 'Polar', Helvetica, Arial, sans-serif;
+        font-weight: bold;
+        font-size: 20px; 
+    }
+
+    .para-selfintro-jp {
+        font-family: "yosugar", Arial, sans-serif;
+        font-size: 16px;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .para-selfintro-eng {
+        font-family: 'Polar', Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .icon-text { 
+        display: inline;
+        align-items: center;
+        font-size: 14px;
+        /* margin-left: 5px;
+        margin-top: 6px; */
+    }
+
+    ul.a {
+        list-style-position: outside;
+    }

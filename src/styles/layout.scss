@@ -1,0 +1,713 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&display=swap'); 
+
+@import url('https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap');
+@font-face {
+  font-family: "amsterdam";
+  src: url("../font/Amsterdam.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Angelcia";
+  src: url("../font/Angelcia.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "lora";
+  src: url("../font/Lora-SemiBold.ttf") format("opentype");
+}
+
+$bp-md: 600px;
+$bp-lg: 960px;
+
+
+
+body { 
+  margin: 0;
+  background: #fff;
+  color: #36393d;
+  -webkit-font-smoothing: antialiased;
+  font-size: .9rem;
+  word-wrap: break-word;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.boundary-container {
+  width: auto;
+  display: flex;
+  margin: 0 auto;
+}
+
+.header {
+  color: #36393d;
+  font-size: 14.4px;
+  margin: auto 0px;
+  display: flex;
+  justify-content: flex-start;
+  
+  a {
+    color: #36393d;
+    font-family: amsterdam;
+    font-size: 24px;
+    text-decoration: none;
+  }
+
+  ul {
+    display: flex;
+    margin: 0px 0px 0px;
+
+  }
+
+  li {
+    display: list-item;
+    font-family: lora;
+    font-size: 14px;
+    font-weight: 350;
+    letter-spacing: 0.8px;
+    margin: 6px 0px 6px -1px;
+    padding: 0px 20px;
+    text-align: left;
+    list-style: none;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+
+    a {
+      color: #434343;
+      display: inline;
+      font-family: lora;
+      font-size: 14px;
+      line-height: normal;
+      vertical-align: middle;
+      text-decoration: none;
+      font-weight: 300;
+
+      :hover {
+        color: rgba(67, 67, 67, 0.5);
+      }
+    }
+  }
+
+  .wrapper { 
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  input { 
+    background-color: transparent; 
+    border-style: none;
+  }   
+
+  .searchContainer {
+    position: relative;
+  }
+
+  .searchIcon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #535151;
+  }
+
+  .searchBox { 
+    display: inline-block;
+    padding: 0 32px 0 8px; 
+    border: 1px solid #c2c8d2; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    font-size: 12px; 
+    line-height: 32px; 
+    background-color: #fff;
+    margin-left: 2em;
+  }
+
+}
+
+//End of header part, now start with image (banner)
+
+.banner-holder {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-image: url('https://personal-portfolio-postcontent.s3.ap-northeast-3.amazonaws.com/images/banner1.png');
+  background-repeat: repeat-x;
+  background-size: contain;
+  background-position: left center;;
+
+  .banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    // Remember to modify the max-height/width for original images
+    max-height: 540px; 
+    max-width: 1080px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    background: inherit;
+    filter: blur(20px);
+    z-index: 1;
+  }
+
+  .original-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://personal-portfolio-postcontent.s3.ap-northeast-3.amazonaws.com/images/banner1.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+}
+
+// End of banner part, now start with about (me, website, social links etc)
+
+.section-profile { 
+  background-color: #ffeff0;
+  color: #353c46; 
+  padding-top: 2.5em; 
+  padding-bottom: 4em;
+  width: 100%;
+
+  .section-container { 
+    width: 100%;
+    margin-left: auto; 
+    margin-right: auto;
+  } 
+
+  .section-header { 
+    font-size: 250%; 
+    font-weight: 400; 
+    text-transform: uppercase; 
+    margin: 0 0 1em 0;
+  } 
+
+  .section-header:after { 
+      content: ""; 
+      display: block; 
+      background: #333; 
+      width: 18px; 
+      height: 1px; 
+      margin-top: .2em;
+  } 
+
+  .section-profile .section-header::after { 
+      background: #000000;
+  }
+
+  .profile-wrapper { 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 100%;
+
+    img { 
+      border: 0;
+      border-radius: 128px;
+      width: 128px;
+      height: 128px;
+    } 
+
+    .profile-image  { 
+      display: table-cell; 
+      vertical-align: top; 
+      height: auto; 
+      background-size: cover; 
+      background-position: center; 
+      padding-right: 2em; 
+      width: 128px;
+    }
+  } 
+
+  .profile-content  { 
+      display: table-cell; 
+      vertical-align: top;
+
+      p {
+        font-size: 15px;
+        font-family: 'Quicksand','Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic';
+        font-weight: 500;
+      }
+  }
+
+  h2 { 
+    line-height: 1.2em;
+  } 
+
+  h2 { 
+      font-family: 'Quicksand','Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic';
+  } 
+
+  h3 { 
+    line-height: 1.2em;
+    font-size: 17px;
+    font-weight: 700;
+  } 
+
+  h3 { 
+      font-family: 'Quicksand','Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic';
+  } 
+
+  .profile-wrapper h3  { 
+      margin-top: 0; 
+      margin-bottom: .8em;
+  }
+
+  .social-links { 
+    margin: 1em 0; 
+    padding: 0;
+
+    li  { 
+      display: inline-block; 
+      list-style: none; 
+      margin: 0 .35em; 
+      padding: 0; 
+      vertical-align: middle;
+
+      .icon-style {
+        color: #737576;
+        border: 1px solid #737576;
+        border-radius: 25%;
+        padding: 10px;
+        transition: color 0.3s ease, background-color 0.3s ease;
+      }
+
+      .icon-style:hover{
+        color:black;
+      }
+    } 
+  }
+}
+
+
+// End with profile, now start with post
+
+.section-post { 
+  color: #353c46; 
+  padding-top: 2.5em; 
+  padding-bottom: 4em;
+  width: 100%;
+
+  .section-container { 
+    width: 100%; 
+    margin-left: auto; 
+    margin-right: auto;
+  } 
+
+  .section-header { 
+    font-size: 250%; 
+    font-weight: 400; 
+    text-transform: uppercase; 
+    margin: 0 0 1em 0;
+  } 
+
+  .section-header:after { 
+      content: ""; 
+      display: block; 
+      background: #333; 
+      width: 18px; 
+      height: 1px; 
+      margin-top: .2em;
+  } 
+
+  .section-post .section-header::after { 
+      background: #000000;
+  }
+
+  h2 { 
+    line-height: 1.2em;
+  } 
+
+  h2 { 
+      font-family: 'Quicksand','Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic';
+  } 
+
+  .post-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 15px;
+    margin: 0 auto;
+    font-family: var(--font-sans);
+    width: 100%; 
+    padding-left: 15px; 
+    padding-right: 15px; 
+    position: relative; 
+    
+    article {
+      flex: 0 0 25%;
+      max-width: 25%;
+      box-sizing: border-box;
+      padding: 0 15px;
+      margin: 50px 0px 0px;
+    
+      img {
+        width: 100%;
+        height: 50%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      p {
+        letter-spacing: 0.8px;
+        font-size: 13.5px;
+        font-weight: bold;
+        margin-top: 15px; 
+        font-family: 'Quicksand','Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic';
+      }
+
+      h3 {
+        letter-spacing: 0.8px;
+        font-weight: 500;
+        font-size: 15px;
+        margin: 10px 0px 0px;
+        font-family: 'Quicksand','Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic';
+      }
+    }
+  }
+}
+
+// End with the post part, now start with contact
+
+.section-contact { 
+  // background-color: #ffeff0;
+  color: #353c46; 
+  padding-top: 2.5em; 
+  padding-bottom: 4em;
+  width: 100%;
+
+  .section-container { 
+    width: 100%; 
+    margin-left: auto; 
+    margin-right: auto;
+  } 
+
+  .section-header { 
+    font-size: 250%; 
+    font-weight: 400; 
+    text-transform: uppercase; 
+    margin: 0 0 1em 0;
+  } 
+
+  .section-header:after { 
+      content: ""; 
+      display: block; 
+      background: #333; 
+      width: 18px; 
+      height: 1px; 
+      margin-top: .2em;
+  } 
+
+  .section-post .section-header::after { 
+      background: #000000;
+  }
+
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 100%;
+  }
+
+  h2 { 
+    line-height: 1.2em;
+  } 
+
+  h2 { 
+      font-family: 'Quicksand','Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic';
+  } 
+
+  h3 { 
+    line-height: 1.2em;
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+  } 
+
+  h3 { 
+      font-family: 'Quicksand','Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic';
+  } 
+
+  P {
+    letter-spacing: 0.8px;
+    font-size: 13.5px;
+    font-weight: bold;
+    padding-bottom: 15px;
+    font-family: 'Quicksand','Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic';
+  }
+
+}
+
+// End with the contact part, now start with footer
+
+.section-footer { 
+  color: #353c46; 
+  padding-top: 2.5em; 
+  padding-bottom: 1em;
+  width: 100%;
+
+  .section-container { 
+    width: 100%; 
+    margin-left: auto; 
+    margin-right: auto;
+  } 
+
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 100%;
+  }
+
+  P {
+    text-align: center;
+    letter-spacing: 0.8px;
+    font-size: 12px;
+    font-weight: bold;
+    padding-bottom: 15px;
+    font-family: 'Quicksand','Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic';
+  }
+
+}
+
+// nav to top / about / post / contact
+
+.navtotop {
+  visibility: hidden;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #AAAAAA;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 15%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+
+  :hover {
+    opacity: 0.5;
+  }
+
+  &.show {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+
+// Media part
+
+//Below this size it will turn it into verticle (Header part)
+@media (max-width: 767px) {
+  .wrapper { 
+    flex-direction: column;
+  }
+
+  .header { 
+    margin: 2em 0;
+  }
+
+  .container-name {
+    text-align: center;
+    padding-bottom: 1.5em;
+  }
+
+  .section-profile .profile-content p {
+    text-align: center;
+    padding: 0px 20px;
+  }
+
+  .section-profile h3 {
+    text-align: center;
+    padding-top: 15px;
+  }
+
+  .section-profile .profile-content ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  .container-menu {
+    flex: none;
+    width: 40%;
+  }
+
+  .section-profile .section-header {
+    font-size: 200%;
+  }
+
+  .section-post .section-header {
+    font-size: 200%;
+  }
+
+  .section-contact .section-header {
+    font-size: 200%;
+  }
+}
+
+@media (min-width: 768px){ 
+  .header { 
+    margin: 4em 0;
+  } 
+
+  .boundary-container { 
+    width: 720px; 
+    margin-left: auto; 
+    margin-right: auto;
+  }
+  
+  //flex: 1; really works for dividing area into two
+  .container-name {
+    flex: 1;
+    display: flex;
+  }
+  
+  .container-menu {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  //wrap the items together in a correct manner when screen size.
+  .wrapper { 
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .section-profile .profile-wrapper { 
+    display: table;
+    width: 100%;
+  }
+
+  .section-profile .section-container  { 
+    width: 720px;
+  }
+
+  .section-post .section-container  { 
+    width: 720px;
+  }
+
+  .section-contact .section-container  { 
+    width: 720px;
+  }
+
+
+}
+
+@media (min-width: 992px){ 
+  .boundary-container { 
+    width: 940px;
+  } 
+
+  .searchBox {
+    min-width: none;
+  }
+
+  .section-profile .section-container  { 
+    width: 940px;
+  }
+
+  .section-post .section-container  { 
+    width: 940px;
+  }
+
+  .section-contact .section-container  { 
+    width: 940px;
+  }
+  
+}
+
+@media (min-width: 1200px) {
+  .boundary-container {
+    width: 1140px;
+  }
+
+  .header { 
+    margin: 5em 0;
+  }
+}
+
+
+// For Search container media only
+@media (max-width: 555px) {
+  .searchContainer {
+    width: 100%;
+  }
+
+  .searchBox {
+    width: 210%;
+    margin-left: 0;
+  }
+
+  .header .searchIcon {
+    color: transparent;
+  }
+
+}
+
+@media (max-width: 500px) {
+  .searchBox {
+    width: 180%;
+    margin-left: 0;
+  }
+
+  .header .searchIcon {
+    color: transparent;
+  }
+}
+
+@media (max-width: 480px) {
+  .searchBox {
+    width: 150%;
+    margin-left: 0;
+  }
+
+  .header .searchIcon {
+    color: transparent;
+  }
+}
+
+@media (max-width: 460px) {
+  .searchBox {
+    width: 130%;
+    margin-left: 0;
+  }
+
+  .header .searchIcon {
+    color: transparent;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .section-post .post-content article {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-post .post-content article {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+
+
