@@ -4,11 +4,11 @@ import '../styles/layout.scss'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons';
-import { faYoutube, faXTwitter, faSoundcloud } from '@fortawesome/free-brands-svg-icons';
+import { faYoutube, faXTwitter, faSoundcloud, faInstagram, faSquareInstagram } from '@fortawesome/free-brands-svg-icons';
 
 const images = [
-  "https://personal-portfolio-postcontent.s3.ap-northeast-3.amazonaws.com/images/banner1.png",
-  "https://personal-portfolio-postcontent.s3.ap-northeast-3.amazonaws.com/images/03-edit.png"
+  "https://personal-portfolio-postcontent.s3.ap-northeast-3.amazonaws.com/images/miku-banner.gif",
+  "https://personal-portfolio-postcontent.s3.ap-northeast-3.amazonaws.com/images/avatar5.jpg"
 ];
 
 // img = card.image1_dir, content = card.contents, title = card.title
@@ -80,7 +80,7 @@ const Portfolio = () => {
           <div className="wrapper">
             <div className="container-name">
               <a href="#profile">
-                Lilyis
+                Riscat
               </a>
             </div>
             <div className="container-menu">
@@ -100,10 +100,10 @@ const Portfolio = () => {
                     CONTACT
                   </a>
                 </li>
-                <div className="searchContainer">
+                {/* <div className="searchContainer">
                   <input type="text" className='searchBox' name="q" placeholder="Search "></input>
                   <FontAwesomeIcon icon={faMagnifyingGlass} size="xs" className='searchIcon'/>
-                </div>
+                </div> */}
               </ul>
             </div>
           </div>
@@ -124,18 +124,18 @@ const Portfolio = () => {
             </div>
             <div className="profile-content">
               <h3>
-                About Me / 私について
+                About Me
               </h3>
               <p>"We dance in constellations around arrays of colored squares." ฅ^._.^ฅ</p>
               <p>
-              Hi I'm Lilyis. This website serves as a place for me to post about interesting moments that 
-              happen in my life and I plan to make posts on a weekly or monthly basis. The content will revolve primarily around gaming, real world happenings, and various events or activities I participate in... Idk let's see where this goes.</p>
+              Hi I'm Riscat. This website serves as a place for me to post about interesting moments that 
+              happen in my life and I plan to make posts on a monthly basis. The content will revolve primarily around gaming, real world happenings, and various events or activities I participate in.</p>
               <h3>
-                My social links / 私のSNS
+                My social links
               </h3>
               <ul className="social-links">
                 <li>
-                  <a href="https://twitter.com/lilyis_prsk" target="_blank" rel="noopener noreferrer">
+                  <a href="https://twitter.com/riscatms" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faXTwitter} size="lg" className="icon-style"/>
                   </a>
                 </li>
@@ -145,8 +145,8 @@ const Portfolio = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="https://soundcloud.com/lilyismzk" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faSoundcloud} size="lg" className="icon-style"/>
+                  <a href="https://www.instagram.com/riscatms/" target="_blank" rel="noopener noreferrer">
+                    <FontAwesomeIcon icon={faSquareInstagram} size="lg" className="icon-style"/>
                   </a>
                 </li>
               </ul>
@@ -180,16 +180,16 @@ const Portfolio = () => {
         </div>
         <div className="content-wrapper">
           <h3>Discord Tag:</h3>
-          <p>lilyismzk</p>
+          <p>riscatms</p>
           <h3>Github ID:</h3>
-          <p>lilyismzk</p>
+          <p>riscatms</p>
           <h3>Email:</h3>
-          <p>lilyismzkgaming@gmail.com</p>
+          <p>riscatmsgaming@gmail.com</p>
         </div>
       </section>
       <section className="section-footer">
         <div className="section-container">
-          <p>© 2023 Lilyis/リリス All rights reserved.</p>
+          <p>© 2024 Riscat All rights reserved.</p>
         </div>
       </section>
     </React.Fragment>
