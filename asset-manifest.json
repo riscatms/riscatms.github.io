@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/riscatms/my-protfolio/static/css/main.efac234b.css",
+    "main.js": "/riscatms/my-protfolio/static/js/main.11a2463a.js",
+    "static/js/787.bc7d429a.chunk.js": "/riscatms/my-protfolio/static/js/787.bc7d429a.chunk.js",
+    "static/media/lefthanded.otf": "/riscatms/my-protfolio/static/media/lefthanded.7c4e9ae977fbd8ad1980.otf",
+    "static/media/yosugaraver1_2.ttf": "/riscatms/my-protfolio/static/media/yosugaraver1_2.0f84aa4697e264642eb3.ttf",
+    "static/media/Lora-SemiBold.ttf": "/riscatms/my-protfolio/static/media/Lora-SemiBold.43c3583054ead8764132.ttf",
+    "static/media/Angelcia.otf": "/riscatms/my-protfolio/static/media/Angelcia.8d63d2fa39bbe7b5348c.otf",
+    "static/media/karakaze-R.otf": "/riscatms/my-protfolio/static/media/karakaze-R.35ee6e4535f48a657253.otf",
+    "static/media/Amsterdam.otf": "/riscatms/my-protfolio/static/media/Amsterdam.84c3f66a87142e0c4650.otf",
+    "index.html": "/riscatms/my-protfolio/index.html",
+    "main.efac234b.css.map": "/riscatms/my-protfolio/static/css/main.efac234b.css.map",
+    "main.11a2463a.js.map": "/riscatms/my-protfolio/static/js/main.11a2463a.js.map",
+    "787.bc7d429a.chunk.js.map": "/riscatms/my-protfolio/static/js/787.bc7d429a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.efac234b.css",
+    "static/js/main.11a2463a.js"
+  ]
+}
